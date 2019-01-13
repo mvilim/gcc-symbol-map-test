@@ -1,8 +1,14 @@
-docker build -t mvilim/test_symbol_export7 -f Dockerfile_gcc7 .
-docker build -t mvilim/test_symbol_export8 -f Dockerfile_gcc8 .
-echo RUNNING GCC 7 TEST
-docker run mvilim/test_symbol_export7 /bin/bash -c "./test_compiler.sh"
-
+docker build -t mvilim/test_symbol_export_arch_gcc7 -f Dockerfile_arch_gcc7 .
+docker build -t mvilim/test_symbol_export_arch_gcc8 -f Dockerfile_arch_gcc8 .
+docker build -t mvilim/test_symbol_export_alpine_gcc8 -f Dockerfile_alpine_gcc8 .
+echo RUNNING ARCH GCC 7 TEST
+docker run mvilim/test_symbol_export_arch_gcc7 ./test_compiler.sh
 echo ""
-echo RUNNING GCC 8 TEST
-docker run mvilim/test_symbol_export8 /bin/bash -c "./test_compiler.sh"
+
+echo RUNNING ARCH GCC 8 TEST
+docker run mvilim/test_symbol_export_arch_gcc8 ./test_compiler.sh
+echo ""
+
+echo RUNNING ALPINE GCC 8 TEST
+docker run mvilim/test_symbol_export_alpine_gcc8 ./test_compiler.sh
+echo ""

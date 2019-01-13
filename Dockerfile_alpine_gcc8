@@ -1,0 +1,5 @@
+FROM alpine:edge
+RUN apk add git cmake gcc g++ make boost autoconf python musl-dev
+RUN mkdir -p /usr/src/symbol_export_test
+WORKDIR /usr/src/symbol_export_test
+COPY CMakeLists.txt main.cpp shared.cpp shared.h symbols.map test_compiler.sh ./

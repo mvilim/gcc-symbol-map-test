@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo RUNNING WITH SYMBOL MAP OFF
 mkdir -p build;
 cd build;
