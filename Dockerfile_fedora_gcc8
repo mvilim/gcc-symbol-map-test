@@ -1,0 +1,5 @@
+FROM fedora:28
+RUN yum install -y cmake gcc gcc-c++ make
+RUN mkdir -p /usr/src/symbol_export_test
+WORKDIR /usr/src/symbol_export_test
+COPY CMakeLists.txt main.cpp shared.cpp shared.h symbols.map test_compiler.sh ./
