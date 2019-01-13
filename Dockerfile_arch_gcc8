@@ -1,6 +1,6 @@
 FROM archimg/base
 RUN \
- pacman -Sy --noconfirm git cmake gcc make boost autoconf python
+ pacman -Sy --noconfirm cmake gcc make
 RUN mkdir -p /usr/src/symbol_export_test
 WORKDIR /usr/src/symbol_export_test
 COPY CMakeLists.txt main.cpp shared.cpp shared.h symbols.map test_compiler.sh ./
