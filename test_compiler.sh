@@ -10,6 +10,7 @@ if [ $? -eq 0 ]; then
 else
     echo PROGRAM FAILED
 fi
+echo ""
 
 echo RUNNING WITH SYMBOL MAP ON
 cmake -DUSE_SYMBOL_MAP=ON .. >/dev/null 2>&1
@@ -21,3 +22,4 @@ if [ $? -eq 0 ]; then
 else
     echo PROGRAM FAILED
 fi
+echo ""
