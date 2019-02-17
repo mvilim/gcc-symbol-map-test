@@ -1,4 +1,4 @@
-FROM archimg/base
+FROM archlinux/base
 RUN \
  pacman -Sy --noconfirm cmake gcc7 make
 RUN mkdir -p /usr/src/symbol_export_test
