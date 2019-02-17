@@ -14,9 +14,8 @@ else
 fi
 echo ""
 
-./main_on >/dev/null
 echo RUNNING WITH SYMBOL MAP ON
-
+./main_on >/dev/null
 if [ $? -eq 0 ]; then
     echo PROGRAM EXITED SUCCESSFULLY
 else
